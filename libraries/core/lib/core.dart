@@ -6,3 +6,4 @@ export './utils/utils.dart';
 export './generated/generated.dart';
 export './extension/extension.dart';
 export './theme/theme.dart';
+export './widgets/widget.dart';

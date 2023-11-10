@@ -14,7 +14,7 @@ const _defaultSettings = SettingsState(
       code: 'en',
       name: 'English',
     ),
-    appTheme: AppTheme.dark,
+    appTheme: AppTheme.light,
   ),
 );
 
