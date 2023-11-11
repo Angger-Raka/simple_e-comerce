@@ -30,6 +30,8 @@ dependencies:
     path: ./libraries/core
 
   # Your featured dependencies here
+  order:
+    path: ./features/order
   home:
     path: ./features/home
   settings:

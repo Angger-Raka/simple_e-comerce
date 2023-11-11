@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:core/core.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:settings/settings.dart';
+import 'package:go_router/go_router.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -88,7 +89,7 @@ class _RegisterPageState extends State<RegisterPage> {
           24.0.sbh,
           Button.filled(
             onPressed: () {
-              Navigator.pop(context);
+              context.pop();
             },
             label: 'Daftar',
           ),
@@ -118,7 +119,7 @@ class _RegisterPageState extends State<RegisterPage> {
           Center(
             child: InkWell(
               onTap: () {
-                Navigator.pop(context);
+                context.pop();
               },
               child: const Text.rich(
                 TextSpan(

@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:home/home.dart';
 import 'package:settings/settings.dart';
 import 'package:auth/auth.dart';
+import 'package:order/order.dart';
 
 final router = GoRouter(
   routes: [
@@ -23,8 +24,20 @@ final router = GoRouter(
       builder: (context, state) => const RegisterPage(),
     ),
     GoRoute(
-      path: NamedRoutes.home,
+      path: NamedRoutes.dashboard,
       builder: (context, state) => const DashboardPage(),
+    ),
+    GoRoute(
+      path: NamedRoutes.productDetail,
+      builder: (context, state) => const ProductDetailPage(),
+    ),
+    GoRoute(
+      path: NamedRoutes.profile,
+      builder: (context, state) => const ProfilePage(),
+    ),
+    GoRoute(
+      path: NamedRoutes.order,
+      builder: (context, state) => const OrderPage(),
     ),
   ],
 );

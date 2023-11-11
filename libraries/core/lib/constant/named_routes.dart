@@ -5,6 +5,8 @@ class NamedRoutes {
   static const String settings = '/settings';
   static const String login = '/login';
   static const String register = '/register';
-  static const String home = '/home';
   static const String dashboard = '/dashboard';
+  static const String productDetail = '/dashboard/product-detail';
+  static const String profile = '/dashboard/profile';
+  static const String order = '/dashboard/order';
 }

@@ -92,12 +92,12 @@ class _LoginPageState extends State<LoginPage> {
           24.sbh,
           Button.filled(
             onPressed: () {
-              context.push(NamedRoutes.home);
+              context.push(NamedRoutes.dashboard);
             },
             label: 'Masuk',
           ),
           40.sbh,
-          Container(
+          SizedBox(
             width: context.sw,
             height: 40,
             child: Row(
@@ -139,12 +139,7 @@ class _LoginPageState extends State<LoginPage> {
           Center(
             child: InkWell(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const RegisterPage(),
-                  ),
-                );
+                context.push(NamedRoutes.register);
               },
               child: const Text.rich(
                 TextSpan(

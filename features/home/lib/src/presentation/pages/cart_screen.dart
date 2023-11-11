@@ -25,9 +25,6 @@ class _CartScreenState extends State<CartScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Keranjang'),
-      ),
       body: ListView(
         padding: const EdgeInsets.all(16.0),
         children: [

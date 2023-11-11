@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 
 class TextStyles {
+  TextStyles(
+    this.context,
+  );
+
+  final BuildContext context;
+
   // No Color Font
 
   //Regular weight

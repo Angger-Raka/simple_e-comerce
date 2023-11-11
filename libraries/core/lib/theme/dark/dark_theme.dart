@@ -28,7 +28,7 @@ class DarkTheme {
       backgroundColor: MaterialStateProperty.all<Color>(Color(0xff6C5ECF)),
       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
         RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8.0),
+          borderRadius: BorderRadius.circular(12.0),
         ),
       ),
     ),
@@ -36,8 +36,17 @@ class DarkTheme {
 
   ThemeData get data {
     return ThemeData.dark().copyWith(
-      scaffoldBackgroundColor: backgroundColor1,
-      elevatedButtonTheme: elevatedButtonTheme,
-    );
+        // colorScheme: ColorScheme.dark(
+        //   primary: primaryColor,
+        // ),
+        // scaffoldBackgroundColor: backgroundColor1,
+        // elevatedButtonTheme: elevatedButtonTheme,
+        // appBarTheme: AppBarTheme(
+        //   backgroundColor: backgroundColor1,
+        //   elevation: 0,
+        //   iconTheme: IconThemeData(color: primaryTextColor),
+        // ),
+        // //add default color for text
+        );
   }
 }

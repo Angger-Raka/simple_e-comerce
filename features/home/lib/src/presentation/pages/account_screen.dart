@@ -1,5 +1,6 @@
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class AccountScreen extends StatelessWidget {
   const AccountScreen({super.key});
@@ -7,11 +8,20 @@ class AccountScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Account'),
-      ),
       body: ListView(
         children: [
+          Container(
+            width: double.infinity,
+            height: 160,
+            child: const Center(
+              child: CircleAvatar(
+                radius: 50,
+                backgroundImage: NetworkImage(
+                  'https://i.pravatar.cc/150?img=3',
+                ),
+              ),
+            ),
+          ),
           ListTile(
             leading: Image.asset(
               MainAssets.iconUser,
@@ -25,10 +35,7 @@ class AccountScreen extends StatelessWidget {
               ),
             ),
             onTap: () {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(builder: (context) => const ProfilePage()),
-              // );
+              context.push(NamedRoutes.profile);
             },
           ),
           ListTile(
@@ -44,10 +51,7 @@ class AccountScreen extends StatelessWidget {
               ),
             ),
             onTap: () {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(builder: (context) => const OrderPage()),
-              // );
+              context.push(NamedRoutes.order);
             },
           ),
           ListTile(

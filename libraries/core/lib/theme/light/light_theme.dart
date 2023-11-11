@@ -23,7 +23,27 @@ class LightTheme {
   final Color primaryTextColor;
   final Color secondaryTextColor;
 
+  static ElevatedButtonThemeData elevatedButtonTheme = ElevatedButtonThemeData(
+    style: ButtonStyle(
+      backgroundColor: MaterialStateProperty.all<Color>(Color(0xff6C5ECF)),
+      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+        RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(12.0),
+        ),
+      ),
+    ),
+  );
+
   ThemeData get data {
-    return ThemeData.light().copyWith();
+    return ThemeData.light().copyWith(
+        // colorScheme: ColorScheme.light(
+        //   primary: backgroundColor1,
+        //   secondary: backgroundColor2,
+        //   tertiary: backgroundColor3,
+        //   surface: primaryTextColor,
+        // ),
+        // scaffoldBackgroundColor: backgroundColor1,
+        // elevatedButtonTheme: elevatedButtonTheme,
+        );
   }
 }
