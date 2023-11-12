@@ -95,25 +95,25 @@ class _HomeScreenState extends State<HomeScreen> {
               const Spacer(),
               Row(
                 children: [
+                  // IconButton(
+                  //     onPressed: () {
+                  //       // Navigator.push(
+                  //       //   context,
+                  //       //   MaterialPageRoute(
+                  //       //       builder: (context) => const SizedBox()),
+                  //       // );
+                  //     },
+                  //     icon: Image.asset(
+                  //       MainAssets.iconBuy,
+                  //       height: 24.0,
+                  //     )),
                   IconButton(
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const SizedBox()),
-                        );
-                      },
-                      icon: Image.asset(
-                        MainAssets.iconBuy,
-                        height: 24.0,
-                      )),
-                  IconButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const SizedBox()),
-                        );
+                        // Navigator.push(
+                        //   context,
+                        //   MaterialPageRoute(
+                        //       builder: (context) => const SizedBox()),
+                        // );
                       },
                       icon: Image.asset(
                         MainAssets.iconNotificationHome,

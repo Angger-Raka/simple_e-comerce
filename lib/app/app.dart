@@ -60,6 +60,7 @@ class AppView extends StatelessWidget {
           return const Center(child: CircularProgressIndicator());
         } else {
           return MaterialApp.router(
+            debugShowCheckedModeBanner: false,
             localizationsDelegates: const [
               GlobalMaterialLocalizations.delegate,
               GlobalWidgetsLocalizations.delegate,

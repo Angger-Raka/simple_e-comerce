@@ -1,6 +1,7 @@
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:home/home.dart';
+import 'package:go_router/go_router.dart';
 
 class CartScreen extends StatefulWidget {
   const CartScreen({super.key});
@@ -72,11 +73,7 @@ class _CartScreenState extends State<CartScreen> {
               child: Button.filled(
                 width: 60,
                 onPressed: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //       builder: (context) => const ShippingAddressPage()),
-                  // );
+                  context.push(NamedRoutes.shippingAddress);
                 },
                 label: 'Pilih Alamat Pengiriman',
               ),

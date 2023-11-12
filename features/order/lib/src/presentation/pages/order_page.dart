@@ -28,6 +28,7 @@ class _OrderPageState extends State<OrderPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: ColorName.primary,
         title: const Text('Pesanan'),
       ),
       body: ListView.separated(

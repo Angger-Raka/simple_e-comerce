@@ -26,6 +26,7 @@ class _OrderDetailPageState extends State<OrderDetailPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: ColorName.primary,
         title: const Text('Detail Pesanan'),
       ),
       body: ListView(

@@ -22,6 +22,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: ColorName.primary,
         title: const Text("Detail Produk"),
       ),
       body: ListView(

@@ -67,11 +67,7 @@ class AccountScreen extends StatelessWidget {
               ),
             ),
             onTap: () {
-              // Navigator.push(
-              //   context,
-              // MaterialPageRoute(
-              //     builder: (context) => const ShippingAddressPage()),
-              // );
+              context.push(NamedRoutes.shippingAddress);
             },
           ),
         ],

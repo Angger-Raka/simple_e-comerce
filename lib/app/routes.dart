@@ -39,5 +39,9 @@ final router = GoRouter(
       path: NamedRoutes.order,
       builder: (context, state) => const OrderPage(),
     ),
+    GoRoute(
+      path: NamedRoutes.shippingAddress,
+      builder: (context, state) => const ShippingAddressPage(),
+    ),
   ],
 );

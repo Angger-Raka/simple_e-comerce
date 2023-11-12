@@ -27,6 +27,7 @@ class _ShippingAddressPageState extends State<ShippingAddressPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: ColorName.primary,
         title: const Text('Pengiriman'),
         actions: [
           IconButton(

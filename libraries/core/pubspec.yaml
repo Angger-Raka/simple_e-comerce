@@ -30,7 +30,6 @@ dependencies:
   flutter_svg: ^2.0.9
   carousel_slider: ^4.2.1
   webview_flutter: ^4.4.2
-  awesome_dialog: ^3.1.0
 
 dev_dependencies:
   flutter_test:
