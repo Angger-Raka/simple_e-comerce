@@ -7,4 +7,12 @@ version:
   revision: "12fccda598477eddd19f93040a1dba24f915b9be"
   channel: "stable"
 
+<<<<<<< HEAD
 project_type: module
+=======
+<<<<<<< HEAD
+project_type: module
+=======
+project_type: package
+>>>>>>> 911e4e2 (Update dependencies and remove unused code)
+>>>>>>> c59d5a8 (Refactored code for improved readability and)
