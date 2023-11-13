@@ -57,7 +57,9 @@ class AppView extends StatelessWidget {
       },
       builder: (context, state) {
         if (state.settings.appTheme == null) {
-          return const Center(child: CircularProgressIndicator());
+          return const Center(
+            child: CircularProgressIndicator(),
+          );
         } else {
           return MaterialApp.router(
             debugShowCheckedModeBanner: false,

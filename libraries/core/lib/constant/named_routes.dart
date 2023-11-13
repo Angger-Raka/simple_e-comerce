@@ -10,4 +10,5 @@ class NamedRoutes {
   static const String profile = '/dashboard/profile';
   static const String order = '/dashboard/order';
   static const String shippingAddress = '/dashboard/shipping-address';
+  static const String payment = '/dashboard/payment';
 }

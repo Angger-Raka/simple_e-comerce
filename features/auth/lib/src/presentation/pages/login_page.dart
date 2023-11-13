@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:settings/settings.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:shimmer/shimmer.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -28,22 +29,6 @@ class _LoginPageState extends State<LoginPage> {
     final settings = context.watch<SettingsBloc>().state.settings;
 
     return Scaffold(
-      // appBar: AppBar(
-      //   actions: [
-      //     IconButton(
-      //       onPressed: () {
-      //         final theme =
-      //             context.read<SettingsBloc>().state.settings.appTheme;
-      //         changeTheme(theme!);
-      //       },
-      //       icon: Icon(
-      //         settings.appTheme == AppTheme.light
-      //             ? Icons.brightness_7
-      //             : Icons.brightness_2,
-      //       ),
-      //     )
-      //   ],
-      // ),
       body: ListView(
         padding: const EdgeInsets.all(16.0),
         children: [
@@ -159,6 +144,55 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class LoginShimmer extends StatelessWidget {
+  const LoginShimmer({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Shimmer.fromColors(
+        enabled: true,
+        baseColor: Colors.grey[300]!,
+        highlightColor: Colors.grey[100]!,
+        child: Column(
+          children: [
+            Container(
+              width: context.sw,
+              height: 200,
+              color: Colors.white,
+            ),
+            Container(
+              width: context.sw,
+              height: 200,
+              color: Colors.white,
+            ),
+            Container(
+              width: context.sw,
+              height: 200,
+              color: Colors.white,
+            ),
+            Container(
+              width: context.sw,
+              height: 200,
+              color: Colors.white,
+            ),
+            Container(
+              width: context.sw,
+              height: 200,
+              color: Colors.white,
+            ),
+            Container(
+              width: context.sw,
+              height: 200,
+              color: Colors.white,
+            ),
+          ],
+        ),
       ),
     );
   }

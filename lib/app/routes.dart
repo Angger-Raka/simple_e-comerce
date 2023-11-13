@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:core/core.dart';
 import 'package:go_router/go_router.dart';
 import 'package:home/home.dart';
@@ -42,6 +44,17 @@ final router = GoRouter(
     GoRoute(
       path: NamedRoutes.shippingAddress,
       builder: (context, state) => const ShippingAddressPage(),
+    ),
+    GoRoute(
+      path: NamedRoutes.payment,
+      builder: (context, state) {
+        if (state.extra != null) {
+          final url = state.extra as String;
+          return PaymentPage(url: url);
+        } else {
+          return const Internalerror();
+        }
+      },
     ),
   ],
 );

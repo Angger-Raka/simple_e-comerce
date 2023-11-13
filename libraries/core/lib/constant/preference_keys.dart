@@ -3,4 +3,5 @@ class PreferenceKeys {
 
   static const String isLogin = 'isLogin';
   static const String settings = 'settings';
+  static const String token = 'token';
 }
