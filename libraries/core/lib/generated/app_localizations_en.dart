@@ -99,4 +99,25 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get paynow => 'Pay Now';
+
+  @override
+  String get home => 'Home';
+
+  @override
+  String get cart => 'Cart';
+
+  @override
+  String get account => 'Account';
+
+  @override
+  String get category => 'category';
+
+  @override
+  String get product => 'product';
+
+  @override
+  String get changePhoneNumber => 'Change Phone Number';
+
+  @override
+  String get changePassword => 'Change Password';
 }

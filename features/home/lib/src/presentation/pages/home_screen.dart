@@ -48,6 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
     final List<String> images = [
       MainAssets.recomendedProductBanner,
       MainAssets.recomendedProductBanner,
@@ -65,8 +66,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Alamat Pengiriman",
-                    style: TextStyle(
+                    l10n.addressDelivery,
+                    style: const TextStyle(
                       fontSize: 10,
                       fontWeight: FontWeight.w400,
                       color: ColorName.grey,
@@ -74,7 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   Row(
                     children: [
-                      Text(
+                      const Text(
                         "Sleman, DI Yogyakarta",
                         style: TextStyle(
                           fontSize: 12,
@@ -83,7 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                       5.sbw,
-                      Icon(
+                      const Icon(
                         Icons.expand_more,
                         size: 18.0,
                         color: ColorName.primary,
@@ -131,9 +132,9 @@ class _HomeScreenState extends State<HomeScreen> {
           16.sbh,
           ImageSlider(items: images),
           12.sbh,
-          const Text(
-            "Kategori",
-            style: TextStyle(
+          Text(
+            l10n.category,
+            style: const TextStyle(
               fontSize: 14,
               fontWeight: FontWeight.w700,
               color: ColorName.primary,
@@ -173,9 +174,9 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
           16.sbh,
-          const Text(
-            "Produk",
-            style: TextStyle(
+          Text(
+            l10n.product,
+            style: const TextStyle(
               fontSize: 14,
               fontWeight: FontWeight.w700,
               color: ColorName.primary,

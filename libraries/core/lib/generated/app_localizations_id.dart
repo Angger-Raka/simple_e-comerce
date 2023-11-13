@@ -99,4 +99,25 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get paynow => 'Bayar Sekarang';
+
+  @override
+  String get home => 'Beranda';
+
+  @override
+  String get cart => 'Keranjang';
+
+  @override
+  String get account => 'Akun';
+
+  @override
+  String get category => 'Kategori';
+
+  @override
+  String get product => 'Produk';
+
+  @override
+  String get changePhoneNumber => 'Ubah Nomor Telepon';
+
+  @override
+  String get changePassword => 'Ubah Kata Sandi';
 }

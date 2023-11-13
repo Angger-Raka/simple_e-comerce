@@ -31,6 +31,8 @@ class _DashboardPageState extends State<DashboardPage> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
+
     return Scaffold(
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
@@ -38,28 +40,28 @@ class _DashboardPageState extends State<DashboardPage> {
         currentIndex: _selectedIndex,
         selectedItemColor: ColorName.primary,
         onTap: _onItemTapped,
-        items: const [
+        items: [
           BottomNavigationBarItem(
-            icon: ImageIcon(
+            icon: const ImageIcon(
               AssetImage(MainAssets.iconHome),
             ),
-            label: 'Home',
+            label: l10n.home,
           ),
           // BottomNavigationBarItem(
           //   icon: ImageIcon(AssetImage(Images.iconSearch),),
           //   label: 'Explore',
           // ),
           BottomNavigationBarItem(
-            icon: ImageIcon(
+            icon: const ImageIcon(
               AssetImage(MainAssets.iconCart),
             ),
-            label: 'Cart',
+            label: l10n.cart,
           ),
           BottomNavigationBarItem(
-            icon: ImageIcon(
+            icon: const ImageIcon(
               AssetImage(MainAssets.iconUser),
             ),
-            label: 'Account',
+            label: l10n.account,
           ),
         ],
       ),

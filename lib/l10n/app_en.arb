@@ -38,6 +38,15 @@
     "addressDelivery":"Delivery Address",
     "addressSatte": "City, Province, Postal Code",
     "phoneNumber":"Phone Number",
-    "paynow":"Pay Now"
+    "paynow":"Pay Now",
+
+    "home":"Home",
+    "cart":"Cart",
+    "account":"Account",
+
+    "category":"category",
+    "product":"product",
     
+    "changePhoneNumber":"Change Phone Number",
+    "changePassword":"Change Password"
 }

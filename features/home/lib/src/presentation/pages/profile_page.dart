@@ -12,10 +12,12 @@ class ProfilePage extends StatefulWidget {
 class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: ColorName.primary,
-        title: const Text('Profile'),
+        title: Text(l10n.profile),
       ),
       body: ListView(
         children: [
@@ -39,8 +41,8 @@ class _ProfilePageState extends State<ProfilePage> {
               },
               icon: const Icon(Icons.edit),
             ),
-            title: const Text('Bahri'),
-            subtitle: const Text('@codewithbahri'),
+            title: const Text(''),
+            subtitle: const Text(''),
           ),
           // MenuTile(
           //   title: 'Kelamin',
@@ -77,7 +79,7 @@ class _ProfilePageState extends State<ProfilePage> {
             },
           ),
           MenuTile(
-            title: 'No Handphone',
+            title: l10n.phoneNumber,
             value: '(62) 856-9876-4321',
             iconPath: MainAssets.iconPhone,
             onTap: () {
@@ -89,7 +91,7 @@ class _ProfilePageState extends State<ProfilePage> {
             },
           ),
           MenuTile(
-            title: 'Ubah Password',
+            title: l10n.changePassword,
             value: '•••••••••••••••••',
             iconPath: MainAssets.iconPassword,
             onTap: () {

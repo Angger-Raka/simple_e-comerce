@@ -38,7 +38,16 @@
     "addressDelivery":"Alamat Pengiriman",
     "addressSatte": "Kota, Provinsi, Kode Pos",
     "phoneNumber":"Nomor Telepon",
-    "paynow":"Bayar Sekarang"
+    "paynow":"Bayar Sekarang",
+
+    "home":"Beranda",
+    "cart":"Keranjang",
+    "account":"Akun",
     
+    "category":"Kategori",
+    "product":"Produk",
+
+    "changePhoneNumber":"Ubah Nomor Telepon",
+    "changePassword":"Ubah Kata Sandi"
 }
 
