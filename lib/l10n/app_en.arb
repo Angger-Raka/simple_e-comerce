@@ -15,5 +15,29 @@
     "invalidBirthMonth": " * Invalid",
     "invalidBirthYear": " * Invalid",
     "atLeast8Chars": " * At least 8 characters",
-    "atLeast3Chars": " * At least 3 characters"  
+    "atLeast3Chars": " * At least 3 characters", 
+    
+    "login":"Login",
+    "loginDesc":"Login to continue",
+    "username":"Username",
+    "password": "Password",
+    "dontHaveAccount": "Don't have an account?",
+    "register":"Register",
+    "registerDesc":"Register to continue",
+    "fullName":"Full Name",
+    "email":"Email",
+    "passwordConfirmation":"Password Confirmation",
+    "alreadyHaveAccount":"Already have an account?",
+
+    "profile":"Profile",
+    "order":"Order",
+    "address":"Address",
+    
+    "cartEmpty":"Oops..\nYour cart is empty!",
+    "chooseAddress":"Choose Address",
+    "addressDelivery":"Delivery Address",
+    "addressSatte": "City, Province, Postal Code",
+    "phoneNumber":"Phone Number",
+    "paynow":"Pay Now"
+    
 }

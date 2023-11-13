@@ -26,6 +26,7 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
     final settings = context.watch<SettingsBloc>().state.settings;
 
     return Scaffold(
@@ -52,10 +53,10 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
           8.sbh,
-          const Center(
+          Center(
             child: Text(
-              "Masuk untuk melanjutkan",
-              style: TextStyle(
+              l10n.loginDesc,
+              style: const TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.w400,
                 color: ColorName.grey,
@@ -65,12 +66,12 @@ class _LoginPageState extends State<LoginPage> {
           24.sbh,
           CustomTextField(
             controller: usernameController,
-            label: 'Username',
+            label: l10n.username,
           ),
           12.sbh,
           CustomTextField(
             controller: passwordController,
-            label: 'Password',
+            label: l10n.password,
             obscureText: true,
           ),
           24.sbh,
@@ -78,7 +79,7 @@ class _LoginPageState extends State<LoginPage> {
             onPressed: () {
               context.push(NamedRoutes.dashboard);
             },
-            label: 'Masuk',
+            label: l10n.login,
           ),
           40.sbh,
           SizedBox(
@@ -125,16 +126,16 @@ class _LoginPageState extends State<LoginPage> {
               onTap: () {
                 context.push(NamedRoutes.register);
               },
-              child: const Text.rich(
+              child: Text.rich(
                 TextSpan(
-                  text: "Belum punya akun? ",
+                  text: l10n.dontHaveAccount,
                   children: [
                     TextSpan(
-                      text: "Register",
-                      style: TextStyle(color: ColorName.primary),
+                      text: l10n.register,
+                      style: const TextStyle(color: ColorName.primary),
                     ),
                   ],
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.w700,
                     color: ColorName.grey,

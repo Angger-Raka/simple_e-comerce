@@ -25,6 +25,8 @@ class _CartScreenState extends State<CartScreen> {
   ];
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
+
     return Scaffold(
       body: ListView(
         padding: const EdgeInsets.all(16.0),
@@ -36,9 +38,9 @@ class _CartScreenState extends State<CartScreen> {
                     top: MediaQuery.of(context).size.height * 0.2),
                 child: Column(
                   children: [
-                    const Text(
-                      'Oppsss..\nKeranjang Anda kosong nih!',
-                      style: TextStyle(fontSize: 18.0),
+                    Text(
+                      l10n.cartEmpty,
+                      style: const TextStyle(fontSize: 18.0),
                       textAlign: TextAlign.center,
                     ),
                     20.sbh,
@@ -75,7 +77,7 @@ class _CartScreenState extends State<CartScreen> {
                 onPressed: () {
                   context.push(NamedRoutes.shippingAddress);
                 },
-                label: 'Pilih Alamat Pengiriman',
+                label: l10n.chooseAddress,
               ),
             ),
           16.sbh,
@@ -90,44 +92,44 @@ class _CartScreenState extends State<CartScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
-                    'Alamat Pengiriman',
-                    style: TextStyle(
+                  Text(
+                    l10n.addressDelivery,
+                    style: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w700,
                     ),
                   ),
                   16.sbh,
-                  const Text(
-                    'Nama Lengkap',
-                    style: TextStyle(
+                  Text(
+                    l10n.fullName,
+                    style: const TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w400,
                       color: ColorName.grey,
                     ),
                   ),
                   8.sbh,
-                  const Text(
-                    'Alamat Lengkap',
-                    style: TextStyle(
+                  Text(
+                    l10n.address,
+                    style: const TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w400,
                       color: ColorName.grey,
                     ),
                   ),
                   8.sbh,
-                  const Text(
-                    'Kota, Provinsi, Kode Pos',
-                    style: TextStyle(
+                  Text(
+                    l10n.addressSatte,
+                    style: const TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w400,
                       color: ColorName.grey,
                     ),
                   ),
                   8.sbh,
-                  const Text(
-                    'No Handphone',
-                    style: TextStyle(
+                  Text(
+                    l10n.phoneNumber,
+                    style: const TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w400,
                       color: ColorName.grey,

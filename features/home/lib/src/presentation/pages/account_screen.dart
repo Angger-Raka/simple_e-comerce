@@ -7,6 +7,8 @@ class AccountScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
+
     return Scaffold(
       body: ListView(
         children: [
@@ -27,9 +29,9 @@ class AccountScreen extends StatelessWidget {
               MainAssets.iconUser,
               width: 24.0,
             ),
-            title: const Text(
-              'Profil',
-              style: TextStyle(
+            title: Text(
+              l10n.profile,
+              style: const TextStyle(
                 color: ColorName.primary,
                 fontWeight: FontWeight.w700,
               ),
@@ -43,9 +45,9 @@ class AccountScreen extends StatelessWidget {
               MainAssets.iconBag,
               width: 24.0,
             ),
-            title: const Text(
-              'Pesanan',
-              style: TextStyle(
+            title: Text(
+              l10n.order,
+              style: const TextStyle(
                 color: ColorName.primary,
                 fontWeight: FontWeight.w700,
               ),
@@ -59,9 +61,9 @@ class AccountScreen extends StatelessWidget {
               MainAssets.iconLocation,
               width: 24.0,
             ),
-            title: const Text(
-              'Alamat',
-              style: TextStyle(
+            title: Text(
+              l10n.address,
+              style: const TextStyle(
                 color: ColorName.primary,
                 fontWeight: FontWeight.w700,
               ),

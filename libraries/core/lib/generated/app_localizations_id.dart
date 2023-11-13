@@ -39,4 +39,64 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get atLeast3Chars => ' * Minimal 3 karakter';
+
+  @override
+  String get login => 'Masuk';
+
+  @override
+  String get loginDesc => 'Masuk untuk melanjutkan';
+
+  @override
+  String get username => 'Nama Pengguna';
+
+  @override
+  String get password => 'Kata Sandi';
+
+  @override
+  String get dontHaveAccount => 'Belum punya akun?';
+
+  @override
+  String get register => 'Daftar';
+
+  @override
+  String get registerDesc => 'Daftar untuk melanjutkan';
+
+  @override
+  String get fullName => 'Nama Lengkap';
+
+  @override
+  String get email => 'Email';
+
+  @override
+  String get passwordConfirmation => 'Konfirmasi Kata Sandi';
+
+  @override
+  String get alreadyHaveAccount => 'Sudah punya akun?';
+
+  @override
+  String get profile => 'Profil';
+
+  @override
+  String get order => 'Pesanan';
+
+  @override
+  String get address => 'Alamat';
+
+  @override
+  String get cartEmpty => 'Oppsss..\nKeranjang Anda kosong nih!,';
+
+  @override
+  String get chooseAddress => 'Pilih Alamat';
+
+  @override
+  String get addressDelivery => 'Alamat Pengiriman';
+
+  @override
+  String get addressSatte => 'Kota, Provinsi, Kode Pos';
+
+  @override
+  String get phoneNumber => 'Nomor Telepon';
+
+  @override
+  String get paynow => 'Bayar Sekarang';
 }

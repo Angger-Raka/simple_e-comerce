@@ -164,6 +164,126 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **' * At least 3 characters'**
   String get atLeast3Chars;
+
+  /// No description provided for @login.
+  ///
+  /// In en, this message translates to:
+  /// **'Login'**
+  String get login;
+
+  /// No description provided for @loginDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Login to continue'**
+  String get loginDesc;
+
+  /// No description provided for @username.
+  ///
+  /// In en, this message translates to:
+  /// **'Username'**
+  String get username;
+
+  /// No description provided for @password.
+  ///
+  /// In en, this message translates to:
+  /// **'Password'**
+  String get password;
+
+  /// No description provided for @dontHaveAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Don\'t have an account?'**
+  String get dontHaveAccount;
+
+  /// No description provided for @register.
+  ///
+  /// In en, this message translates to:
+  /// **'Register'**
+  String get register;
+
+  /// No description provided for @registerDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Register to continue'**
+  String get registerDesc;
+
+  /// No description provided for @fullName.
+  ///
+  /// In en, this message translates to:
+  /// **'Full Name'**
+  String get fullName;
+
+  /// No description provided for @email.
+  ///
+  /// In en, this message translates to:
+  /// **'Email'**
+  String get email;
+
+  /// No description provided for @passwordConfirmation.
+  ///
+  /// In en, this message translates to:
+  /// **'Password Confirmation'**
+  String get passwordConfirmation;
+
+  /// No description provided for @alreadyHaveAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Already have an account?'**
+  String get alreadyHaveAccount;
+
+  /// No description provided for @profile.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile'**
+  String get profile;
+
+  /// No description provided for @order.
+  ///
+  /// In en, this message translates to:
+  /// **'Order'**
+  String get order;
+
+  /// No description provided for @address.
+  ///
+  /// In en, this message translates to:
+  /// **'Address'**
+  String get address;
+
+  /// No description provided for @cartEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'Oops..\nYour cart is empty!'**
+  String get cartEmpty;
+
+  /// No description provided for @chooseAddress.
+  ///
+  /// In en, this message translates to:
+  /// **'Choose Address'**
+  String get chooseAddress;
+
+  /// No description provided for @addressDelivery.
+  ///
+  /// In en, this message translates to:
+  /// **'Delivery Address'**
+  String get addressDelivery;
+
+  /// No description provided for @addressSatte.
+  ///
+  /// In en, this message translates to:
+  /// **'City, Province, Postal Code'**
+  String get addressSatte;
+
+  /// No description provided for @phoneNumber.
+  ///
+  /// In en, this message translates to:
+  /// **'Phone Number'**
+  String get phoneNumber;
+
+  /// No description provided for @paynow.
+  ///
+  /// In en, this message translates to:
+  /// **'Pay Now'**
+  String get paynow;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

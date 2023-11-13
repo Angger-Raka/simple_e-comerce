@@ -29,6 +29,7 @@ class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     final settings = context.watch<SettingsBloc>().state.settings;
+    final l10n = context.l10n;
 
     return Scaffold(
       body: ListView(
@@ -54,10 +55,10 @@ class _RegisterPageState extends State<RegisterPage> {
             ),
           ),
           8.0.sbh,
-          const Center(
+          Center(
             child: Text(
-              "Buat akun baru",
-              style: TextStyle(
+              l10n.registerDesc,
+              style: const TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.w400,
                 color: ColorName.grey,
@@ -67,23 +68,23 @@ class _RegisterPageState extends State<RegisterPage> {
           12.0.sbh,
           CustomTextField(
             controller: emailController,
-            label: 'Email',
+            label: l10n.email,
           ),
           12.0.sbh,
           CustomTextField(
             controller: nameController,
-            label: 'Name',
+            label: l10n.fullName,
           ),
           12.0.sbh,
           CustomTextField(
             controller: passwordController,
-            label: 'Password',
+            label: l10n.password,
             obscureText: true,
           ),
           12.0.sbh,
           CustomTextField(
             controller: confirmPasswordController,
-            label: 'Konfirmasi Password',
+            label: l10n.passwordConfirmation,
             obscureText: true,
           ),
           24.0.sbh,
@@ -94,7 +95,7 @@ class _RegisterPageState extends State<RegisterPage> {
             label: 'Daftar',
           ),
           20.sbh,
-          Container(
+          SizedBox(
             width: context.sw,
             height: 40,
             child: Row(
@@ -121,16 +122,16 @@ class _RegisterPageState extends State<RegisterPage> {
               onTap: () {
                 context.pop();
               },
-              child: const Text.rich(
+              child: Text.rich(
                 TextSpan(
-                  text: "Sudah punya akun? ",
+                  text: l10n.alreadyHaveAccount,
                   children: [
                     TextSpan(
-                      text: "Sign In",
-                      style: TextStyle(color: ColorName.primary),
+                      text: l10n.login,
+                      style: const TextStyle(color: ColorName.primary),
                     ),
                   ],
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.w700,
                     color: ColorName.grey,
