@@ -27,7 +27,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     final l10n = context.l10n;
-    final settings = context.watch<SettingsBloc>().state.settings;
+    final settings = context.settings;
 
     return Scaffold(
       body: ListView(
@@ -90,8 +90,7 @@ class _LoginPageState extends State<LoginPage> {
               children: [
                 IconButton(
                   onPressed: () {
-                    final theme =
-                        context.read<SettingsBloc>().state.settings.appTheme;
+                    final theme = context.settings.appTheme;
                     SettingsUtils(context).changeTheme(theme!);
                   },
                   icon: Icon(
@@ -102,8 +101,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 IconButton(
                   onPressed: () {
-                    final language =
-                        context.read<SettingsBloc>().state.settings.language;
+                    final language = context.settings.language;
                     SettingsUtils(context).changeLanguage(language!);
                   },
                   icon: CircleAvatar(

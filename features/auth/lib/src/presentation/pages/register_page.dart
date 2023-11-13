@@ -28,7 +28,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
   @override
   Widget build(BuildContext context) {
-    final settings = context.watch<SettingsBloc>().state.settings;
+    final settings = context.settings;
     final l10n = context.l10n;
 
     return Scaffold(
@@ -103,8 +103,7 @@ class _RegisterPageState extends State<RegisterPage> {
               children: [
                 IconButton(
                   onPressed: () {
-                    final theme =
-                        context.read<SettingsBloc>().state.settings.appTheme;
+                    final theme = context.settings.appTheme;
                     SettingsUtils(context).changeTheme(theme!);
                   },
                   icon: Icon(

@@ -56,8 +56,7 @@ class _SettingsPageState extends State<SettingsPage> {
             children: [
               ElevatedButton(
                 onPressed: () async {
-                  final theme =
-                      context.read<SettingsBloc>().state.settings.appTheme;
+                  final theme = context.settings.appTheme;
                   await changeTheme(theme!);
                 },
                 child: Text(l10n.changeTheme),
@@ -65,8 +64,7 @@ class _SettingsPageState extends State<SettingsPage> {
               15.sbw,
               ElevatedButton(
                 onPressed: () async {
-                  final language =
-                      context.read<SettingsBloc>().state.settings.language;
+                  final language = context.settings.language;
                   await changeLanguage(language!);
                 },
                 child: Text(l10n.changeLanguage),
