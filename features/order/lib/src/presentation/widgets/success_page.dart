@@ -18,14 +18,14 @@ class _SuccessPageState extends State<SuccessPage> {
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text('Pembayaran Sukses'),
-            content: Text('Selamat Pembayaran Berhasil dilakukan'),
+            title: const Text('Pembayaran Sukses'),
+            content: const Text('Selamat Pembayaran Berhasil dilakukan'),
             actions: [
               TextButton(
                 onPressed: () {
                   context.push(NamedRoutes.dashboard);
                 },
-                child: Text('OK'),
+                child: const Text('OK'),
               ),
             ],
           );

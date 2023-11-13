@@ -3,11 +3,12 @@ import 'package:equatable/equatable.dart';
 
 class GenericException extends Equatable implements Exception {
   final String message;
+  final Object? code;
 
-  const GenericException({required this.message});
+  const GenericException({required this.message, this.code});
 
   @override
-  List<Object?> get props => [message];
+  List<Object?> get props => [message, code];
 }
 
 class FetchDataException extends GenericException {
@@ -18,37 +19,38 @@ class FetchDataException extends GenericException {
 }
 
 class BadRequestException extends GenericException {
-  const BadRequestException([message])
+  const BadRequestException([code])
       : super(
-          message: ErrorString.badRequestException,
+          message: "${ErrorString.badRequestException} (statuscode:$code)",
         );
 }
 
 class UnauthorizedException extends GenericException {
-  const UnauthorizedException([message])
+  const UnauthorizedException([code])
       : super(
-          message: ErrorString.unauthorizedException,
+          message: "${ErrorString.unauthorizedException} (statuscode:$code)",
         );
 }
 
 class NotFoundException extends GenericException {
-  const NotFoundException([message])
+  const NotFoundException([code])
       : super(
-          message: ErrorString.notFoundException,
+          message: "${ErrorString.notFoundException} (statuscode:$code)",
         );
 }
 
 class ConflictException extends GenericException {
-  const ConflictException([message])
+  const ConflictException([code])
       : super(
-          message: ErrorString.conflictException,
+          message: "${ErrorString.conflictException} (statuscode:$code)",
         );
 }
 
 class InternalServerErrorException extends GenericException {
-  const InternalServerErrorException([message])
+  const InternalServerErrorException([code])
       : super(
-          message: ErrorString.internalServerErrorException,
+          message:
+              "${ErrorString.internalServerErrorException} (statuscode:$code)",
         );
 }
 

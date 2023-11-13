@@ -10,10 +10,10 @@ class AccountScreen extends StatelessWidget {
     return Scaffold(
       body: ListView(
         children: [
-          Container(
+          const SizedBox(
             width: double.infinity,
             height: 160,
-            child: const Center(
+            child: Center(
               child: CircleAvatar(
                 radius: 50,
                 backgroundImage: NetworkImage(
