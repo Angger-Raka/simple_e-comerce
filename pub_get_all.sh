@@ -30,3 +30,5 @@ done
 # Run pub get on the root project
 cd $DIR
 flutter pub get
+
+dart run flutter_native_splash:create
