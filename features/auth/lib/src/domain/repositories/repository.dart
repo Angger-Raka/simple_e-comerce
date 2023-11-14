@@ -10,6 +10,5 @@ mixin AuthRepository {
     RequestRegister params,
   );
   Future<Either<GenericException, bool>> statusAuth();
-  Future<Either<GenericException, bool>> getAuth();
   Future<Either<GenericException, bool>> logout();
 }

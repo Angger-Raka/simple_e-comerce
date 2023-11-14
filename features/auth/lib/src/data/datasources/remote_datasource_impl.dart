@@ -2,24 +2,32 @@ import 'package:auth/auth.dart';
 import 'package:core/core.dart';
 import 'package:dio/dio.dart';
 
-class AuthDataSourcesImpl implements AuthDataSources {
-  AuthDataSourcesImpl(
-    this.dio,
-    this.preferences,
+class AuthRemoteDataSourcesImpl implements AuthRemoteDataSources {
+  AuthRemoteDataSourcesImpl(
+    this._dio,
+    this._prefs,
   );
 
-  final Dio dio;
-  final Preference preferences;
+  final Dio _dio;
+  final Preference _prefs;
 
   @override
   Future<ResponseLogin> login(RequestLogin params) async {
     try {
-      final result = await dio.post(
+      final result = await _dio.post(
         '/login',
         // data: params.toJson(),
       );
 
       if (result.statusCode == 200) {
+        final time = DateTime.now().add(
+          const Duration(hours: 1),
+        );
+        // _prefs.setString(PreferenceKeys.isLogin, 'token');
+        _prefs.setString(
+          PreferenceKeys.cookieTime,
+          time.toString(),
+        );
         return ResponseLogin();
       }
     } on DioException catch (e) {
@@ -31,7 +39,7 @@ class AuthDataSourcesImpl implements AuthDataSources {
   @override
   Future<ResponseRegister> register(RequestRegister params) async {
     try {
-      final result = await dio.post(
+      final result = await _dio.post(
         '/register',
         // data: params.toJson(),
       );
@@ -48,15 +56,15 @@ class AuthDataSourcesImpl implements AuthDataSources {
   @override
   Future<bool> statusAuth() async {
     try {
-      final token = await preferences.getString(PreferenceKeys.isLogin);
-      final cookieTime = await preferences.getString(PreferenceKeys.cookieTime);
+      final token = await _prefs.getString(PreferenceKeys.isLogin);
+      final cookieTime = await _prefs.getString(PreferenceKeys.cookieTime);
 
       if (token != '' && cookieTime != '') {
         final time = DateTime.parse(cookieTime);
         final now = DateTime.now();
-        final difference = time.isAfter(now);
+        final result = time.isBefore(now);
 
-        return difference;
+        return result;
       } else {
         return false;
       }
@@ -66,12 +74,13 @@ class AuthDataSourcesImpl implements AuthDataSources {
   }
 
   @override
-  Future<bool> getAuth() async {
-    return false;
-  }
-
-  @override
   Future<bool> logout() async {
-    return false;
+    try {
+      await _prefs.remove(PreferenceKeys.isLogin);
+      await _prefs.remove(PreferenceKeys.cookieTime);
+      return true;
+    } catch (e) {
+      throw CacheException(e.toString());
+    }
   }
 }

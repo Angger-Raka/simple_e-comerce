@@ -3,6 +3,7 @@ import 'package:get_it/get_it.dart';
 import 'package:dio/dio.dart';
 import 'package:settings/settings.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:auth/auth.dart';
 
 final getIt = GetIt.instance;
 
@@ -49,5 +50,35 @@ Future<void> _setUpModular(Flavor flavor) async {
 
   //! ============================ End Settings ============================ //
 
+  //! ================================ Auth ================================ //
+
+  //? Data
+  getIt.registerLazySingleton<AuthRemoteDataSources>(
+    () => AuthRemoteDataSourcesImpl(
+      getIt<Dio>(),
+      getIt<Preference>(),
+    ),
+  );
+
+  getIt.registerLazySingleton<AuthRepository>(
+    () => AuthRepositoryImpl(
+      getIt<AuthRemoteDataSources>(),
+    ),
+  );
+
+  //? Domain
+  getIt.registerLazySingleton(
+    () => StatusAuthUseCase(getIt<AuthRepository>()),
+  );
+  getIt.registerLazySingleton(
+    () => LogoutUseCase(getIt<AuthRepository>()),
+  );
+
+  //? Presentation
+
+  //! ============================== End Auth ============================== //
+
   //! ================================ Home ================================ //
+
+  //! ============================== End Home ============================== //
 }

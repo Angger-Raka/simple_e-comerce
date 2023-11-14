@@ -5,7 +5,7 @@ import 'package:dartz/dartz.dart';
 class AuthRepositoryImpl implements AuthRepository {
   AuthRepositoryImpl(this.datasources);
 
-  final AuthDataSources datasources;
+  final AuthRemoteDataSources datasources;
 
   @override
   Future<Either<GenericException, ResponseLogin>> login(
@@ -35,16 +35,6 @@ class AuthRepositoryImpl implements AuthRepository {
   Future<Either<GenericException, bool>> statusAuth() async {
     try {
       final result = await datasources.statusAuth();
-      return Right(result);
-    } on GenericException catch (e) {
-      return Left(e);
-    }
-  }
-
-  @override
-  Future<Either<GenericException, bool>> getAuth() async {
-    try {
-      final result = await datasources.getAuth();
       return Right(result);
     } on GenericException catch (e) {
       return Left(e);
