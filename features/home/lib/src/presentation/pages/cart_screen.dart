@@ -2,6 +2,7 @@ import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:home/home.dart';
 import 'package:go_router/go_router.dart';
+import 'package:shimmer/shimmer.dart';
 
 class CartScreen extends StatefulWidget {
   const CartScreen({super.key});
@@ -190,6 +191,10 @@ class _CartScreenState extends State<CartScreen> {
                       //             url: '',
                       //           )),
                       // );
+                      context.push(
+                        NamedRoutes.payment,
+                        extra: "https://www.youtube.com/",
+                      );
                     },
                     label: 'Bayar Sekarang',
                   ),
@@ -197,6 +202,23 @@ class _CartScreenState extends State<CartScreen> {
               ),
             ),
         ],
+      ),
+    );
+  }
+}
+
+class ShimmerCart extends StatelessWidget {
+  const ShimmerCart({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Shimmer.fromColors(
+        baseColor: Colors.grey[300]!,
+        highlightColor: Colors.grey[100]!,
+        child: ListView(
+          children: [],
+        ),
       ),
     );
   }

@@ -20,6 +20,37 @@ class _PaymentPageState extends State<PaymentPage> {
 
   @override
   void initState() {
+    // _controller = WebViewController()
+    //   ..setJavaScriptMode(JavaScriptMode.unrestricted)
+    //   ..setBackgroundColor(const Color(0x00000000))
+    //   ..setNavigationDelegate(
+    //     NavigationDelegate(
+    //       onProgress: (int progress) {
+    //         // Update loading bar.
+    //       },
+    //       onPageStarted: (String url) {
+    //         if (url.contains('status_code=202&transaction_status=deny')) {
+    //           Navigator.push(context, MaterialPageRoute(builder: (_) {
+    //             return const FailedPage();
+    //           }));
+    //         }
+    //         if (url.contains('status_code=200&transaction_status=settlement')) {
+    //           Navigator.push(context, MaterialPageRoute(builder: (_) {
+    //             return const SuccessPage();
+    //           }));
+    //         }
+    //       },
+    //       onPageFinished: (String url) {},
+    //       onWebResourceError: (WebResourceError error) {},
+    //       onNavigationRequest: (NavigationRequest request) {
+    //         if (request.url.startsWith('https://www.youtube.com/')) {
+    //           return NavigationDecision.prevent;
+    //         }
+    //         return NavigationDecision.navigate;
+    //       },
+    //     ),
+    //   )
+    //   ..loadRequest(Uri.parse(widget.url));
     _controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setBackgroundColor(const Color(0x00000000))
@@ -28,18 +59,7 @@ class _PaymentPageState extends State<PaymentPage> {
           onProgress: (int progress) {
             // Update loading bar.
           },
-          onPageStarted: (String url) {
-            if (url.contains('status_code=202&transaction_status=deny')) {
-              Navigator.push(context, MaterialPageRoute(builder: (_) {
-                return const FailedPage();
-              }));
-            }
-            if (url.contains('status_code=200&transaction_status=settlement')) {
-              Navigator.push(context, MaterialPageRoute(builder: (_) {
-                return const SuccessPage();
-              }));
-            }
-          },
+          onPageStarted: (String url) {},
           onPageFinished: (String url) {},
           onWebResourceError: (WebResourceError error) {},
           onNavigationRequest: (NavigationRequest request) {
@@ -50,7 +70,7 @@ class _PaymentPageState extends State<PaymentPage> {
           },
         ),
       )
-      ..loadRequest(Uri.parse(widget.url));
+      ..loadRequest(Uri.parse('https://flutter.dev'));
     const oneSec = Duration(seconds: 8);
     Timer.periodic(oneSec, (Timer timer) {
       //do check payment status here

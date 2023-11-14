@@ -78,6 +78,10 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
             Flexible(
               child: Button.outlined(
                 onPressed: () {
+                  context.push(
+                    NamedRoutes.payment,
+                    extra: "https://www.youtube.com/",
+                  );
                   // Navigator.push(
                   //   context,
                   //   MaterialPageRoute(
