@@ -25,7 +25,8 @@ class DarkTheme {
 
   static ElevatedButtonThemeData elevatedButtonTheme = ElevatedButtonThemeData(
     style: ButtonStyle(
-      backgroundColor: MaterialStateProperty.all<Color>(Color(0xff6C5ECF)),
+      backgroundColor:
+          MaterialStateProperty.all<Color>(const Color(0xff6C5ECF)),
       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
         RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12.0),

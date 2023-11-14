@@ -36,9 +36,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
               name: 'Nike Air Zoom 36',
               price: 700000,
             ),
-            onWishlistTap: (isWishlist) {
-              // TODO: on wishlist tap
-            },
+            onWishlistTap: (isWishlist) {},
           ),
           11.sbh,
           ProductDescriptionWidget(

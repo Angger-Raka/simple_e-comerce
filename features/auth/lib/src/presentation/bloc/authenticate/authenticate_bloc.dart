@@ -3,25 +3,24 @@ import 'package:bloc/bloc.dart';
 import 'package:core/core.dart';
 import 'package:meta/meta.dart';
 
-part 'authenticator_event.dart';
-part 'authenticator_state.dart';
+part 'authenticate_event.dart';
+part 'authenticate_state.dart';
 
-class AuthenticatorBloc extends Bloc<AuthenticatorEvent, AuthenticatorState> {
-  AuthenticatorBloc(
+class AuthenticateBloc extends Bloc<AuthenticateEvent, AuthenticateState> {
+  AuthenticateBloc(
     this.usecase,
   ) : super(Unauthenticated()) {
-    on<AuthenticatorInit>(_init);
+    on<GetAuthenticated>(_getAuthenticated);
   }
 
   final StatusAuthUseCase usecase;
 
-  @override
-  Future<void> _init(
-    AuthenticatorInit event,
-    Emitter<AuthenticatorState> emit,
+  Future<void> _getAuthenticated(
+    GetAuthenticated event,
+    Emitter<AuthenticateState> emit,
   ) async {
-    final result = await usecase(NoParams());
-    result.fold(
+    final status = await usecase(NoParams());
+    status.fold(
       (l) => emit(Unauthenticated()),
       (r) {
         if (r) {

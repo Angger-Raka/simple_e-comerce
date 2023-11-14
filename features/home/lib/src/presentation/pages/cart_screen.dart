@@ -150,7 +150,7 @@ class _CartScreenState extends State<CartScreen> {
                 ),
                 child: CustomDropdown(
                   value: 'JNE',
-                  items: ['JNE', 'J&T'],
+                  items: const ['JNE', 'J&T'],
                   label: 'Kurir',
                   onChanged: (value) {},
                 )),
@@ -217,7 +217,7 @@ class ShimmerCart extends StatelessWidget {
         baseColor: Colors.grey[300]!,
         highlightColor: Colors.grey[100]!,
         child: ListView(
-          children: [],
+          children: const [],
         ),
       ),
     );

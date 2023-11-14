@@ -213,7 +213,7 @@ class ShimmerDashboard extends StatelessWidget {
         baseColor: Colors.grey[300]!,
         highlightColor: Colors.grey[100]!,
         child: ListView(
-          children: [],
+          children: const [],
         ),
       ),
     );
