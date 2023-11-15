@@ -38,13 +38,7 @@ class _LoginPageState extends State<LoginPage> {
               content: Text(state.message),
             ),
           );
-        } else if (state is LoginLoading) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              content: Text(l10n.account),
-            ),
-          );
-        }
+        } else if (state is LoginLoading) {}
       },
       child: Scaffold(
         body: ListView(
@@ -94,7 +88,11 @@ class _LoginPageState extends State<LoginPage> {
             24.sbh,
             Button.filled(
               onPressed: () {
-                context.push(NamedRoutes.dashboard);
+                final params = Login(
+                  username: usernameController.text,
+                  password: passwordController.text,
+                );
+                context.read<LoginBloc>().add(params);
               },
               label: l10n.login,
             ),

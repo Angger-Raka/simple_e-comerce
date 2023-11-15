@@ -14,14 +14,18 @@ final class RegisterLoading extends RegisterState {
 }
 
 final class RegisterSuccess extends RegisterState {
+  RegisterSuccess(this.message);
+
+  final String message;
+
   @override
-  List<Object?> get props => [];
+  List<Object?> get props => [message];
 }
 
 final class RegisterFailure extends RegisterState {
   final String message;
 
-  RegisterFailure({required this.message});
+  RegisterFailure(this.message);
 
   @override
   List<Object?> get props => [message];

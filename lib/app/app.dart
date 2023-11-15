@@ -1,3 +1,4 @@
+import 'package:auth/auth.dart';
 import 'package:core/core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -28,6 +29,16 @@ class _App extends StatelessWidget {
         BlocProvider(
           create: (context) =>
               GetIt.I<SettingsBloc>()..add(const InitializeSettings()),
+        ),
+        BlocProvider(
+          create: (context) =>
+              GetIt.I<AuthenticateBloc>()..add(GetAuthenticated()),
+        ),
+        BlocProvider(
+          create: (context) => GetIt.I<LoginBloc>(),
+        ),
+        BlocProvider(
+          create: (context) => GetIt.I<RegisterBloc>(),
         ),
       ],
       child: const AppView(),

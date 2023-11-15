@@ -15,25 +15,23 @@ class AuthRemoteDataSourcesImpl implements AuthRemoteDataSources {
   Future<ResponseLogin> login(RequestLogin params) async {
     try {
       final result = await _dio.post(
-        '/login',
-        // data: params.toJson(),
+        '/auth/local',
+        data: params.toJson(),
       );
 
       if (result.statusCode == 200) {
         final time = DateTime.now().add(
           const Duration(hours: 1),
         );
-        // _prefs.setString(PreferenceKeys.isLogin, 'token');
         _prefs.setString(
           PreferenceKeys.cookieTime,
           time.toString(),
         );
-        return ResponseLogin();
       }
+      return ResponseLogin.fromJson(result.data);
     } on DioException catch (e) {
       throw e.toPrettyDescription();
     }
-    return ResponseLogin();
   }
 
   @override
@@ -41,16 +39,13 @@ class AuthRemoteDataSourcesImpl implements AuthRemoteDataSources {
     try {
       final result = await _dio.post(
         '/register',
-        // data: params.toJson(),
+        data: params.toJson(),
       );
 
-      if (result.statusCode == 200) {
-        return ResponseRegister();
-      }
+      return ResponseRegister.fromJson(result.data);
     } on DioException catch (e) {
       throw e.toPrettyDescription();
     }
-    return ResponseRegister();
   }
 
   @override

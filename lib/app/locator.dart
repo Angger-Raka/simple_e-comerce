@@ -73,8 +73,25 @@ Future<void> _setUpModular(Flavor flavor) async {
   getIt.registerLazySingleton(
     () => LogoutUseCase(getIt<AuthRepository>()),
   );
+  getIt.registerLazySingleton(
+    () => LoginUseCase(getIt<AuthRepository>()),
+  );
+  getIt.registerLazySingleton(
+    () => RegisterUseCase(getIt<AuthRepository>()),
+  );
 
   //? Presentation
+  getIt.registerFactory(
+    () => AuthenticateBloc(getIt<StatusAuthUseCase>()),
+  );
+  getIt.registerFactory(
+    () => LoginBloc(getIt<LoginUseCase>()),
+  );
+  getIt.registerFactory(
+    () => RegisterBloc(
+      getIt<RegisterUseCase>(),
+    ),
+  );
 
   //! ============================== End Auth ============================== //
 
