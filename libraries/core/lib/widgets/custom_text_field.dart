@@ -5,11 +5,13 @@ class CustomTextField extends StatelessWidget {
   final String label;
   final Function(String value)? onChanged;
   final bool obscureText;
+  final String? Function(String? value)? validate;
 
   const CustomTextField({
     super.key,
     required this.controller,
     required this.label,
+    this.validate,
     this.onChanged,
     this.obscureText = false,
   });
@@ -20,6 +22,7 @@ class CustomTextField extends StatelessWidget {
       controller: controller,
       onChanged: onChanged,
       obscureText: obscureText,
+      validator: validate,
       decoration: InputDecoration(
         labelText: label,
         border: OutlineInputBorder(

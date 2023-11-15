@@ -165,6 +165,12 @@ abstract class AppLocalizations {
   /// **' * At least 3 characters'**
   String get atLeast3Chars;
 
+  /// No description provided for @passwordConfirmationNotMatch.
+  ///
+  /// In en, this message translates to:
+  /// **' * Password confirmation not match'**
+  String get passwordConfirmationNotMatch;
+
   /// No description provided for @login.
   ///
   /// In en, this message translates to:

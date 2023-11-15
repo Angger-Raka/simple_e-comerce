@@ -7,9 +7,9 @@ class ValidateTextFiled {
   static String? validate(
     BuildContext ctx,
     String? value,
-    ValidationTypes label,
+    String label,
   ) {
-    switch (label.toString()) {
+    switch (label) {
       case (ValidationTypes.signinEmail):
         {
           return _validateEmail(ctx, value!);

@@ -41,6 +41,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get atLeast3Chars => ' * At least 3 characters';
 
   @override
+  String get passwordConfirmationNotMatch => ' * Password confirmation not match';
+
+  @override
   String get login => 'Login';
 
   @override

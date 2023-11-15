@@ -15,7 +15,8 @@
     "invalidBirthMonth": " * Invalid",
     "invalidBirthYear": " * Invalid",
     "atLeast8Chars": " * At least 8 characters",
-    "atLeast3Chars": " * At least 3 characters", 
+    "atLeast3Chars": " * At least 3 characters",
+    "passwordConfirmationNotMatch" : " * Password confirmation not match", 
     
     "login":"Login",
     "loginDesc":"Login to continue",

@@ -16,6 +16,7 @@
     "invalidBirthYear": " * Tahun lahir tidak valid",
     "atLeast8Chars": " * Minimal 8 karakter",
     "atLeast3Chars": " * Minimal 3 karakter",
+    "passwordConfirmationNotMatch" : " * Konfirmasi kata sandi tidak sama",
 
     "login":"Masuk",
     "loginDesc":"Masuk untuk melanjutkan",

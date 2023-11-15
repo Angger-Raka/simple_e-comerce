@@ -41,6 +41,9 @@ class AppLocalizationsId extends AppLocalizations {
   String get atLeast3Chars => ' * Minimal 3 karakter';
 
   @override
+  String get passwordConfirmationNotMatch => ' * Konfirmasi kata sandi tidak sama';
+
+  @override
   String get login => 'Masuk';
 
   @override
