@@ -1,4 +1,4 @@
-[![Static Badge](https://img.shields.io/badge/Framework-Flutter-blue?style=f)](https://flutter.dev/)
+<!-- [![Static Badge](https://img.shields.io/badge/Framework-Flutter-blue?style=f)](https://flutter.dev/)
 
 [![Static Badge](https://img.shields.io/badge/Language-Dart-blue?style=f)](https://dart.dev/)
 
@@ -96,4 +96,4 @@ Flutter-Starter/
 [plugin_bloc]: https://plugins.jetbrains.com/plugin/12129-bloc
 [plugin_clean_arch]: https://plugins.jetbrains.com/plugin/13470-clean-architecture-for-flutter
 [plugin_flutter_intl]: https://plugins.jetbrains.com/plugin/13666-flutter-intl
-[vs_plugin_bloc]: https://marketplace.visualstudio.com/items?itemName=FelixAngelov.bloc -->
+[vs_plugin_bloc]: https://marketplace.visualstudio.com/items?itemName=FelixAngelov.bloc --> -->

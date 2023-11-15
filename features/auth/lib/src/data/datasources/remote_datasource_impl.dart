@@ -19,16 +19,17 @@ class AuthRemoteDataSourcesImpl implements AuthRemoteDataSources {
         data: params.toJson(),
       );
 
+      final data = ResponseLogin.fromJson(result.data);
+
       if (result.statusCode == 200) {
         final time = DateTime.now().add(
           const Duration(hours: 1),
         );
-        _prefs.setString(
-          PreferenceKeys.cookieTime,
-          time.toString(),
-        );
+
+        _prefs.setString(PreferenceKeys.isLogin, data.jwt!);
+        _prefs.setString(PreferenceKeys.cookieTime, time.toString());
       }
-      return ResponseLogin.fromJson(result.data);
+      return data;
     } on DioException catch (e) {
       throw e.toPrettyDescription();
     }
