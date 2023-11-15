@@ -92,6 +92,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     val,
                     ValidationTypes.signinEmail,
                   );
+                  return null;
                 },
               ),
               12.0.sbh,
@@ -110,6 +111,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     value,
                     ValidationTypes.signinPassword,
                   );
+                  return null;
                 },
               ),
               12.0.sbh,
@@ -121,6 +123,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   if (value != passwordController.text) {
                     return l10n.passwordConfirmationNotMatch;
                   }
+                  return null;
                 },
               ),
               24.0.sbh,

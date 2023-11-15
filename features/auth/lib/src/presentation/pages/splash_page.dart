@@ -29,11 +29,12 @@ class _SplashPageState extends State<SplashPage> {
       },
       child: Scaffold(
         body: Center(
-            child: Image.asset(
-          MainAssets.logo,
-          width: 200,
-          height: 200,
-        )),
+          child: Image.asset(
+            MainAssets.logo,
+            width: 200,
+            height: 200,
+          ),
+        ),
       ),
     );
   }

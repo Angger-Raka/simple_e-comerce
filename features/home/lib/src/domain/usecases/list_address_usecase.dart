@@ -2,17 +2,17 @@ import 'package:dartz/dartz.dart';
 import 'package:core/core.dart';
 import 'package:home/home.dart';
 
-class ListProductUseCase implements UseCase<ResponseListProduct, NoParams> {
-  ListProductUseCase({
+class ListAddressUseCase implements UseCase<ResponseListAddress, NoParams> {
+  ListAddressUseCase({
     required this.repository,
   });
 
   final HomeRepository repository;
 
   @override
-  Future<Either<GenericException, ResponseListProduct>> call(
+  Future<Either<GenericException, ResponseListAddress>> call(
     NoParams params,
   ) async {
-    return repository.getAllProducts();
+    return repository.getAllAddress();
   }
 }

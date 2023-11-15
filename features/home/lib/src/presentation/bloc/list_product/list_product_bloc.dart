@@ -7,10 +7,9 @@ part 'list_product_state.dart';
 class ListProductBloc extends Bloc<ListProductEvent, ListProductState> {
   ListProductBloc() : super(ListProductInitial()) {
     on<ListProductEvent>((event, emit) {});
-    on<GetListProduct>((event, emit) {});
+    on<GetListProduct>(_getList);
   }
 
-  @override
   Future<void> _getList(
     GetListProduct event,
     Emitter<ListProductState> emit,
